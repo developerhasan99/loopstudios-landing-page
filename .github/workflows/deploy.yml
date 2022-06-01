@@ -23,7 +23,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: c-hive/gha-yarn-cache@v2
       - run: yarn install
-      - run: yarn run export
+      - run: yarn run build
 
       - run: touch ./out/.nojekyll
 
