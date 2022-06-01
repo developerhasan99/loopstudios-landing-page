@@ -26,48 +26,92 @@
   <body>
     <section
       id="hero"
-      class="pt-14 bg-cover bg-center bg-VeryDarkGray bg-[url(../images/desktop/image-hero.jpg)]"
+      class="pt-5 bg-cover bg-center bg-VeryDarkGray bg-[url(../images/desktop/image-hero.jpg)]"
     >
       <nav class="py-4">
-        <div class="w-full max-w-6xl m-auto flex justify-between">
+        <div
+          class="w-full max-w-6xl px-4 m-auto flex justify-between md:items-center"
+        >
           <a href="#">
             <img src="./images/logo.svg" alt="Loopstudios" />
           </a>
-          <ul class="flex text-White gap-10 font-alata">
-            <li>
-              <a class="hover:border-b-2 block pb-1" href="">About</a>
-            </li>
-            <li>
-              <a class="hover:border-b-2 block pb-1" href="">Careers</a>
-            </li>
-            <li>
-              <a class="hover:border-b-2 block pb-1" href="">Events</a>
-            </li>
-            <li>
-              <a class="hover:border-b-2 block pb-1" href="">Products</a>
-            </li>
-            <li>
-              <a class="hover:border-b-2 block pb-1" href="">Support</a>
-            </li>
-          </ul>
+          <div
+            id="mobile-nav"
+            class="duration-500 p-4 bg-Black fixed top-0 left-full h-screen w-full grid grid-rows-[55px] md:bg-[transparent] md:static z-50 md:w-auto md:h-auto md:items-center"
+          >
+            <div class="flex justify-between mt-3 mb-5 md:hidden">
+              <a href="#">
+                <img src="./images/logo.svg" alt="Loopstudios" />
+              </a>
+              <button id="close-nav">
+                <img src="./images/icon-close.svg" alt="close" />
+              </button>
+            </div>
+            <ul
+              class="text-White font-josefin text-[25px] uppercase gap-5 flex flex-col justify-center md:text-sm md:capitalize md:flex-row md:font-alata"
+            >
+              <li>
+                <a
+                  class="border-b-2 border-[transparent] hover:border-White block pb-1 duration-500"
+                  href="#"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="border-b-2 border-[transparent] hover:border-White block pb-1 duration-500"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="border-b-2 border-[transparent] hover:border-White block pb-1 duration-500"
+                  href="#"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="border-b-2 border-[transparent] hover:border-White block pb-1 duration-500"
+                  href="#"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="border-b-2 border-[transparent] hover:border-White block pb-1 duration-500"
+                  href="#"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button id="toggle-nav" class="md:hidden block">
+            <img src="./images/icon-hamburger.svg" alt="" />
+          </button>
         </div>
       </nav>
-      <div class="w-full max-w-6xl m-auto py-28">
+      <div class="w-full max-w-6xl px-4 m-auto py-28">
         <h1
-          class="uppercase text-White text-[70px] w-[50%] py-2 px-5 font-josefin border-2"
+          class="uppercase text-White text-[45px] py-2 px-5 font-josefin border-2 md:w-[50%] md:text-[70px]"
         >
           Immersive experiences that deliver
         </h1>
       </div>
     </section>
-    <section id="the-leader" class="py-32">
-      <div class="w-full max-w-6xl m-auto">
-        <div class="relative pt-24">
+    <section id="the-leader" class="py-24 md:mb-16">
+      <div class="w-full max-w-6xl px-4 m-auto">
+        <div class="relative md:pt-24">
           <div class="max-w-full">
             <img src="./images/desktop/image-interactive.jpg" alt="" />
           </div>
-          <div class="absolute pl-20 pt-20 bg-White w-[50%] bottom-0 right-0">
-            <h2 class="uppercase font-josefin text-[45px]">
+          <div
+            class="text-center p-4 md:p-0 md:text-left md:absolute md:bottom-0 md:right-0 md:pl-20 md:pt-20 bg-White md:w-[50%]"
+          >
+            <h2
+              class="uppercase font-josefin mt-16 mb-5 leading-[1] text-[35px] md:my-0 md:text-[45px]"
+            >
               The leader in interactive VR
             </h2>
             <p class="font-alata text-VeryDarkGray text-xs leading-7">
@@ -81,45 +125,52 @@
       </div>
     </section>
     <section id="gallery">
-      <div class="w-full max-w-6xl m-auto">
-        <div class="flex justify-between items-center mb-16">
-          <h2 class="uppercase font-josefin text-[45px]">Our creations</h2>
+      <div class="w-full max-w-6xl px-4 m-auto">
+        <div class="mb-16 md:flex justify-between items-center">
+          <h2
+            class="text-center uppercase font-josefin text-[35px] md:text-[45px]"
+          >
+            Our creations
+          </h2>
           <button
-            class="border-2 border-DarkGray rounded-sm px-8 py-2 font-alata uppercase tracking-[5px]"
+            class="hover:bg-Black hover:text-White duration-500 hidden border-2 border-DarkGray rounded-sm px-8 py-2 font-alata uppercase tracking-[5px] md:inline-block"
           >
             See all
           </button>
         </div>
-        <div class="grid grid-cols-4 gap-8 mb-32">
+        <div class="grid gap-8 mb-16 md:grid-cols-4">
           <div
-            class="h-[400px] items-end flex px-7 py-5 bg-center bg-cover bg-[url(../images/desktop/image-deep-earth.jpg)]"
+            class="items-end flex px-7 py-5 bg-[url(../images/mobile/image-deep-earth.jpg)] bg-center bg-cover h-[150px] md:h-[400px] md:bg-[url(../images/desktop/image-deep-earth.jpg)]"
           >
             <h3
               class="leading-none font-josefin uppercase text-White text-[35px]"
             >
-              Deep earth
+              Deep <br />
+              earth
             </h3>
           </div>
           <div
-            class="h-[400px] items-end flex px-7 py-5 bg-center bg-cover bg-[url(../images/desktop/image-night-arcade.jpg)]"
+            class="items-end flex px-7 py-5 bg-[url(../images/mobile/image-night-arcade.jpg)] bg-center bg-cover h-[150px] md:h-[400px] md:bg-[url(../images/desktop/image-night-arcade.jpg)]"
           >
             <h3
               class="leading-none font-josefin uppercase text-White text-[30px]"
             >
-              Night arcade
+              Night <br />
+              arcade
             </h3>
           </div>
           <div
-            class="h-[400px] items-end flex px-7 py-5 bg-center bg-cover bg-[url(../images/desktop/image-soccer-team.jpg)]"
+            class="items-end flex px-7 py-5 bg-[url(../images/mobile/image-soccer-team.jpg)] bg-center bg-cover h-[150px] md:h-[400px] md:bg-[url(../images/desktop/image-soccer-team.jpg)]"
           >
             <h3
               class="leading-none font-josefin uppercase text-White text-[30px]"
             >
-              Soccer team VR
+              Soccer <br />
+              team VR
             </h3>
           </div>
           <div
-            class="h-[400px] items-end flex px-7 py-5 bg-center bg-cover bg-[url(../images/desktop/image-grid.jpg)]"
+            class="items-end flex px-7 bg-[url(../images/mobile/image-grid.jpg)] py-5 bg-center bg-cover h-[150px] md:h-[400px] md:bg-[url(../images/desktop/image-grid.jpg)]"
           >
             <h3
               class="leading-none font-josefin uppercase text-White text-[30px]"
@@ -129,83 +180,143 @@
             </h3>
           </div>
           <div
-            class="h-[400px] items-end flex px-7 py-5 bg-center bg-cover bg-[url(../images/desktop/image-from-above.jpg)]"
+            class="items-end flex px-7 py-5 bg-[url(../images/mobile/image-from-above.jpg)] bg-center bg-cover h-[150px] md:h-[400px] md:bg-[url(../images/desktop/image-from-above.jpg)]"
           >
             <h3
               class="leading-none font-josefin uppercase text-White text-[30px]"
             >
-              From up above VR
+              From up <br />
+              above VR
             </h3>
           </div>
           <div
-            class="h-[400px] items-end flex px-7 py-5 bg-center bg-cover bg-[url(../images/desktop/image-pocket-borealis.jpg)]"
+            class="items-end flex px-7 py-5 bg-[url(../images/mobile/image-pocket-borealis.jpg)] bg-center bg-cover h-[150px] md:h-[400px] md:bg-[url(../images/desktop/image-pocket-borealis.jpg)]"
           >
             <h3
               class="leading-none font-josefin uppercase text-White text-[30px]"
             >
-              Pocket borealis
+              Pocket <br />
+              borealis
             </h3>
           </div>
           <div
-            class="h-[400px] items-end flex px-7 py-5 bg-center bg-cover bg-[url(../images/desktop/image-curiosity.jpg)]"
+            class="items-end flex px-7 py-5 bg-[url(../images/mobile/image-curiosity.jpg)] bg-center bg-cover h-[150px] md:h-[400px] md:bg-[url(../images/desktop/image-curiosity.jpg)]"
           >
             <h3
               class="leading-none font-josefin uppercase text-White text-[30px]"
             >
-              The curiosity
+              The <br />
+              curiosity
             </h3>
           </div>
           <div
-            class="h-[400px] items-end flex px-7 py-5 bg-center bg-cover bg-[url(../images/desktop/image-fisheye.jpg)]"
+            class="items-end flex px-7 py-5 bg-[url(../images/mobile/image-fisheye.jpg)] bg-center bg-cover h-[150px] md:h-[400px] md:bg-[url(../images/desktop/image-fisheye.jpg)]"
           >
             <h3
               class="leading-none font-josefin uppercase text-White text-[30px]"
             >
-              Make it fisheye
+              Make it <br />
+              fisheye
             </h3>
           </div>
+        </div>
+
+        <div class="text-center mb-24">
+          <button
+            class="hover:bg-Black hover:text-White duration-500 border-2 border-DarkGray rounded-sm px-8 py-2 font-alata uppercase tracking-[5px] md:hidden"
+          >
+            See all
+          </button>
         </div>
       </div>
     </section>
     <footer class="bg-Black text-White py-8">
-      <div class="w-full max-w-6xl m-auto">
-        <div class="flex justify-between py-4">
+      <div class="w-full max-w-6xl px-4 m-auto">
+        <div class="py-4 md:flex justify-between">
           <div>
             <a href="#">
-              <img src="./images/logo.svg" alt="Loopstudios" />
+              <img
+                class="m-auto md:m-0"
+                src="./images/logo.svg"
+                alt="Loopstudios"
+              />
             </a>
-            <ul class="flex gap-12 font-alata my-6">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Support</a></li>
+            <ul
+              class="font-alata my-16 flex flex-col gap-8 items-center md:flex-row md:items-start md:my-7"
+            >
+              <li>
+                <a
+                  class="pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                  >Support</a
+                >
+              </li>
             </ul>
           </div>
-          <div>
-            <ul class="flex gap-4 items-center">
+          <div class="md:text-center">
+            <ul class="flex gap-4 justify-center">
               <li>
-                <a href="#">
+                <a
+                  class="inline-block pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                >
                   <img src="./images/icon-facebook.svg" alt="Facebook" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a
+                  class="inline-block pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                >
                   <img src="./images/icon-twitter.svg" alt="Twitter" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a
+                  class="inline-block pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                >
                   <img src="./images/icon-instagram.svg" alt="Instagram" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a
+                  class="inline-block pb-2 duration-500 border-b-2 border-[transparent] hover:border-White"
+                  href="#"
+                >
                   <img src="./images/icon-pinterest.svg" alt="Pinterest" />
                 </a>
               </li>
             </ul>
-            <p class="font-alata text-VeryDarkGray my-6">
+            <p class="font-alata text-VeryDarkGray my-6 text-center">
               © 2021 Loopstudios. All rights reserved.
             </p>
           </div>
@@ -227,5 +338,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="./js/script.ts"></script>
   </body>
 </html>
